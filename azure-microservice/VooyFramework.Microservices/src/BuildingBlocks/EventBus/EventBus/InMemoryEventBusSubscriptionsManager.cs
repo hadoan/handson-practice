@@ -19,7 +19,10 @@ namespace VooyFramework.Microservices.BuildingBlocks.EventBus
             eventTypes = new List<Type>();
         }
 
-        public bool IsEmpty => !handlers.Keys.Any();
+        public global::System.Boolean GetIsEmpty()
+        {
+            return !handlers.Keys.Any();
+        }
 
         public event EventHandler<string> OnEventRemoved;
 

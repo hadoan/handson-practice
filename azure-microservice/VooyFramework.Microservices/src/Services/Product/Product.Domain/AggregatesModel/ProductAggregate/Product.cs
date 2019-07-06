@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Product.Domain.AggregatesModel.ProductAggregate
+namespace VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate
 {
     public class Product : Entity, IAggregateRoot
     {

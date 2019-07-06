@@ -18,7 +18,7 @@ namespace Product.Infrastructure
         private IDbContextTransaction currentTransaction;
 
 
-        public DbSet<Product.Domain.AggregatesModel.ProductAggregate.Product> Products { get; set; }
+        public DbSet<VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate.Product> Products { get; set; }
         //public DbSet<ProductCategory> ProductCategories { get; set; }
 
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Product.API.Application.Queries
+namespace VooyFramework.Microservices.Product.API.Application.Queries
 {
     public class Product
     {
@@ -22,6 +22,6 @@ namespace Product.API.Application.Queries
     {
         public string Name { get; set; }
         public string Desc { get; set; }
-        public List<String> Categories { get; set; }
+        public List<string> Categories { get; set; }
     }
 }

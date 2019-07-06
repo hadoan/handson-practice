@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Product.Domain.AggregatesModel.ProductAggregate
+namespace VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate
 {
-    public interface IProductRepository:IRepository<Product>
+    public interface IProductRepository : IRepository<Product>
     {
         Product Add(Product product);
     }

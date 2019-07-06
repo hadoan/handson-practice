@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-using Product.API.Infrastructure.ActionResults;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using VooyFramework.Microservices.Product.API.Infrastructure.ActionResults;
 
-namespace Product.API.Infrastructure.Filters
+namespace VooyFramework.Microservices.Product.API.Infrastructure.Filters
 {
     public class HttpGlobalExceptionFilter : IExceptionFilter
     {
@@ -43,20 +43,20 @@ namespace Product.API.Infrastructure.Filters
             //}
             //else
             //{
-                var json = new JsonErrorResponse
-                {
-                    Messages = new[] { "An error occur.Try it again." }
-                };
+            var json = new JsonErrorResponse
+            {
+                Messages = new[] { "An error occur.Try it again." }
+            };
 
-                if (env.IsDevelopment())
-                {
-                    json.DeveloperMessage = context.Exception;
-                }
+            if (env.IsDevelopment())
+            {
+                json.DeveloperMessage = context.Exception;
+            }
 
-                // Result asigned to a result object but in destiny the response is empty. This is a known bug of .net core 1.1
-                // It will be fixed in .net core 1.1.2. See https://github.com/aspnet/Mvc/issues/5594 for more information
-                context.Result = new InternalServerErrorObjectResult(json);
-                context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            // Result asigned to a result object but in destiny the response is empty. This is a known bug of .net core 1.1
+            // It will be fixed in .net core 1.1.2. See https://github.com/aspnet/Mvc/issues/5594 for more information
+            context.Result = new InternalServerErrorObjectResult(json);
+            context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             //}
             context.ExceptionHandled = true;
         }

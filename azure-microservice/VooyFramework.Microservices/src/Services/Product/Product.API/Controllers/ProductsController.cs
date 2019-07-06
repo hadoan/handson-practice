@@ -1,11 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Product.API.Application.Commands;
-using Product.API.Application.Queries;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using VooyFramework.Microservices.Product.API.Application.Queries;
 
 namespace Product.API.Controllers
 {
@@ -27,7 +23,7 @@ namespace Product.API.Controllers
 
         [Route("create")]
         [HttpPost]
-        public async Task<ActionResult<bool>> CreateProduct([FromBody] CreateProductCommand createProductCommand)
+        public async Task<ActionResult<bool>> CreateProduct([FromBody] VooyFramework.Microservices.Product.API.Application.Commands.CreateProductCommand createProductCommand)
         {
 
             return await mediator.Send(createProductCommand);

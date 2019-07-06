@@ -8,7 +8,8 @@ namespace VooyFramework.Microservices.BuildingBlocks.EventBus
 {
     public interface IEventBusSubscriptionsManager
     {
-        bool IsEmpty { get; }
+        global::System.Boolean GetIsEmpty();
+
         event EventHandler<string> OnEventRemoved;
 
         void AddDynamicSubscription<TH>(string eventName) where TH : IDynamicIntegrationEventHandler;

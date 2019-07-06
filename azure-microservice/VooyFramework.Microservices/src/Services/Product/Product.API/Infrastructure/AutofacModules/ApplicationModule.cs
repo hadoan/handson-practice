@@ -1,15 +1,11 @@
 ﻿using Autofac;
-using Product.API.Application.Commands;
-using Product.API.Application.Queries;
-using Product.Domain.AggregatesModel.ProductAggregate;
 using Product.Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
+using VooyFramework.Microservices.BuildingBlocks.EventBus.Abstractions;
+using VooyFramework.Microservices.Product.API.Application.Queries;
+using VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate;
 
-namespace Product.API.Infrastructure.AutofacModules
+namespace VooyFramework.Microservices.Product.API.Infrastructure.AutofacModules
 {
     public class ApplicationModule
         : Autofac.Module
@@ -34,7 +30,7 @@ namespace Product.API.Infrastructure.AutofacModules
                 .As<IProductRepository>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterAssemblyTypes(typeof(CreateProductCommandHandler).GetTypeInfo().Assembly)
+            builder.RegisterAssemblyTypes(typeof(Application.Commands.CreateProductCommandHandler).GetTypeInfo().Assembly)
                 .AsClosedTypesOf(typeof(IIntegrationEventHandler<>));
 
         }

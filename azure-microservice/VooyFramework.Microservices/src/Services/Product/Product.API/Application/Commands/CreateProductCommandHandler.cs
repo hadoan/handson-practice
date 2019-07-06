@@ -1,13 +1,12 @@
 ﻿using MediatR;
-using Product.Domain.AggregatesModel.ProductAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate;
 
-
-namespace Product.API.Application.Commands
+namespace VooyFramework.Microservices.Product.API.Application.Commands
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, bool>
     {

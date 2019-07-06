@@ -1,8 +1,8 @@
-﻿using Product.Domain.AggregatesModel.ProductAggregate;
-using Product.Domain.Seedwork;
+﻿using Product.Domain.Seedwork;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate;
 
 namespace Product.Infrastructure.Repositories
 {
@@ -17,7 +17,7 @@ namespace Product.Infrastructure.Repositories
 
         public IUnitOfWork UnitOfWork => context;
 
-        public Domain.AggregatesModel.ProductAggregate.Product Add(Domain.AggregatesModel.ProductAggregate.Product product)
+        public VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate.Product Add(VooyFramework.Microservices.Product.Domain.AggregatesModel.ProductAggregate.Product product)
         {
             if (product.IsTransient())
             {

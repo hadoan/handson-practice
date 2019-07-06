@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Product.API.Application.Queries
+namespace VooyFramework.Microservices.Product.API.Application.Queries
 {
     public class ProductQueries : IProductQueries
     {
@@ -53,7 +53,7 @@ namespace Product.API.Application.Queries
                 //total = 0
             };
 
-           
+
 
             return product;
         }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
-namespace Product.API.Application.Commands
+namespace VooyFramework.Microservices.Product.API.Application.Commands
 {
     [DataContract]
     public class CreateProductCommand:IRequest<bool>
