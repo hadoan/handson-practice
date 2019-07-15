@@ -1,0 +1,2 @@
+﻿						  
+sc create nsqd binpath= "c:\nsq\nsqd.exe -mem-queue-size=0 --broadcast-address=192.168.1.152 -lookupd-tcp-address=192.168.1.152:4160 -data-path=c:\nsq\data" start= auto DisplayName= "nsqd"
