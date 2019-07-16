@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  magicboxcloud.api:
+    image: ${REGISTRY:-konbicloud}/magicboxcloud.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: aspnet-core/src/KonbiCloud.Web.Host/Dockerfile    
+  
+  magicboxcloud.frontend:
+    image: ${REGISTRY:-konbicloud}/magicboxcloud.frontend:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: angular/Dockerfile
