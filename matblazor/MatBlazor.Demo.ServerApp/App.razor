@@ -1,0 +1,21 @@
+﻿@*
+    The Router component displays whichever component has a @page
+    directive matching the current URI.
+*@
+
+
+<MatToastContainer/>
+
+<MatThemeProvider Theme="@theme">
+    <Router AppAssembly=typeof(MatBlazor.Demo.Pages.Index).Assembly/>
+</MatThemeProvider>
+
+
+@functions
+{
+
+    MatTheme theme = new MatTheme()
+    {
+    };
+
+}

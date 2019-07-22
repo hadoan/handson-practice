@@ -1,0 +1,294 @@
+@using Microsoft.AspNetCore.Components
+
+<DocMatList></DocMatList>
+<DocMatListItem Secondary="true"></DocMatListItem>
+
+<h5 class="mat-h5">
+    Example
+</h5>
+<DemoContainer>
+    <Content>
+        <MatList>
+            <MatListItem>
+                Item 1
+            </MatListItem>
+            <MatListItem>
+                Item 2
+            </MatListItem>
+            <MatListItem>
+                Item 3
+            </MatListItem>
+        </MatList>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatList>
+            <MatListItem>
+                Item 1
+            </MatListItem>
+            <MatListItem>
+                Item 2
+            </MatListItem>
+            <MatListItem>
+                Item 3
+            </MatListItem>
+        </MatList>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+<h5 class="mat-h5">SingleSelection</h5>
+<DemoContainer>
+    <Content>
+        <MatList SingleSelection="true">
+            <MatListItem>
+                Item 1
+            </MatListItem>
+            <MatListItem>
+                Item 2
+            </MatListItem>
+            <MatListItem>
+                Item 3
+            </MatListItem>
+        </MatList>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatList SingleSelection=""true"">
+            <MatListItem>
+                Item 1
+            </MatListItem>
+            <MatListItem>
+                Item 2
+            </MatListItem>
+            <MatListItem>
+                Item 3
+            </MatListItem>
+        </MatList>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+<h5 class="mat-h5">
+    Two-Line List
+</h5>
+<DemoContainer>
+    <Content>
+        <MatList SingleSelection="true" TwoLine="true">
+            <MatListItem>
+                <MatListItemText>
+                    <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                    <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+
+            <MatListItem>
+                <MatListItemText>
+                    <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                    <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+
+            <MatListItem>
+                <MatListItemText>
+                    <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                    <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+
+        </MatList>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatList SingleSelection=""true"" TwoLine=""true"">
+            <MatListItem>
+                <MatListItemText>
+                    <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                    <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+
+            <MatListItem>
+                <MatListItemText>
+                    <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                    <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+
+            <MatListItem>
+                <MatListItemText>
+                    <MatListItemPrimaryText>First-line text</MatListItemPrimaryText>
+                    <MatListItemSecondaryText>Second-line text</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+
+        </MatList>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+<h5 class="mat-h5">
+    MatListGroup
+</h5>
+<DemoContainer>
+    <Content>
+        <MatListGroup>
+            <MatListGroupSubHeader>List 1</MatListGroupSubHeader>
+            <MatList>
+                <MatListItem>
+                    line item
+                </MatListItem>
+                <MatListItem>
+                    line item
+                </MatListItem>
+            </MatList>
+            <MatListGroupSubHeader>List 2</MatListGroupSubHeader>
+            <MatList>
+                <MatListItem>
+                    line item
+                </MatListItem>
+                <MatListItem>
+                    line item
+                </MatListItem>
+            </MatList>
+        </MatListGroup>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatListGroup>
+            <MatListGroupSubHeader>List 1</MatListGroupSubHeader>
+            <MatList>
+                <MatListItem>
+                    line item
+                </MatListItem>
+                <MatListItem>
+                    line item
+                </MatListItem>
+            </MatList>
+            <MatListGroupSubHeader>List 2</MatListGroupSubHeader>
+            <MatList>
+                <MatListItem>
+                    line item
+                </MatListItem>
+                <MatListItem>
+                    line item
+                </MatListItem>
+            </MatList>
+        </MatListGroup>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+<h5 class="mat-h5">
+    MatListDivider
+</h5>
+<DemoContainer>
+    <Content>
+        <MatList>
+            <MatListItem>
+                line item
+            </MatListItem>
+            <MatListDivider></MatListDivider>
+            <MatListItem>
+                line item
+            </MatListItem>
+            <MatListDivider></MatListDivider>
+            <MatListItem>
+                line item
+            </MatListItem>
+        </MatList>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatList>
+            <MatListItem>
+                line item
+            </MatListItem>
+            <MatListDivider></MatListDivider>
+            <MatListItem>
+                line item
+            </MatListItem>
+            <MatListDivider></MatListDivider>
+            <MatListItem>
+                line item
+            </MatListItem>
+        </MatList>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+<h5 class="mat-h5">
+    MatListItem Href
+</h5>
+<DemoContainer>
+    <Content>
+        @inject IUriHelper Url
+        <MatList>
+            <MatListItem Href="http://google.com">
+                Google
+            </MatListItem>
+            <MatListItem Href="@Url.ToAbsoluteUri("MatTextField").AbsoluteUri">
+                MatTextField
+            </MatListItem>
+        </MatList>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        @inject IUriHelper Url
+        <MatList>
+            <MatListItem Href=""http://google.com"">
+                Google
+            </MatListItem>
+            <MatListItem Href=""@Url.ToAbsoluteUri(""MatTextField"").AbsoluteUri"">
+                MatTextField
+            </MatListItem>
+        </MatList>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+
+<h4 class="mat-h4">Helper components</h4>
+<h5 class="mat-h5">MatListItemText</h5>
+<DemoContainer>
+    <Content>
+        <MatList SingleSelection="true">
+            <MatListItem>
+                <MatListItemText>
+                    Item 1
+                </MatListItemText>
+            </MatListItem>
+            <MatListItem>
+                <MatListItemText>
+                    Item 2
+                </MatListItemText>
+            </MatListItem>
+            <MatListItem>
+                <MatListItemText>
+                    Item 3
+                </MatListItemText>
+            </MatListItem>
+        </MatList>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatList SingleSelection=""true"">
+            <MatListItem>
+                <MatListItemText>
+                    Item 1
+                </MatListItemText>
+            </MatListItem>
+            <MatListItem>
+                <MatListItemText>
+                    Item 2
+                </MatListItemText>
+            </MatListItem>
+            <MatListItem>
+                <MatListItemText>
+                    Item 3
+                </MatListItemText>
+            </MatListItem>
+        </MatList>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>

@@ -1,0 +1,8 @@
+﻿@inherits BaseMatToastContainer
+
+<div class="@ClassMapper.Class" @ref="Ref" style="@Style">
+    @foreach (var item in ToastsToShow)
+    {
+        <MatToastItem @key="@item" Toast="@item"></MatToastItem>
+    }
+</div>

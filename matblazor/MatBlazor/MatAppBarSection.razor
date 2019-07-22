@@ -1,0 +1,26 @@
+﻿@inherits BaseMatDomComponent
+@using Microsoft.AspNetCore.Components
+<section class="@ClassMapper.Class" style="@Style">
+    @ChildContent
+</section>
+
+@functions
+{
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public MatAppBarSectionAlign Align { get; set; } = MatAppBarSectionAlign.Start;
+
+    protected override void OnInit()
+    {
+        base.OnInit();
+        ClassMapper
+            .Add("mdc-top-app-bar__section")
+            .If("mdc-top-app-bar__section--align-start", () => this.Align == MatAppBarSectionAlign.Start)
+            .If("mdc-top-app-bar__section--align-end", () => this.Align == MatAppBarSectionAlign.End);
+    }
+
+    protected ClassMapper ClassMapper { get; } = new ClassMapper();
+}

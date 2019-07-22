@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Components
+
+@if (Href == null)
+{
+    <li class="mdc-list-item" onmousedown="@OnMouseDown" onclick="@OnClick">
+        @ChildContent
+    </li>
+}
+else
+{
+    <a class="mdc-list-item" href="@Href" onmousedown="@OnMouseDown" onclick="@OnClick">
+        @ChildContent
+    </a>
+}
+
+@functions
+{
+
+    [Parameter]
+    protected EventCallback<UIMouseEventArgs> OnMouseDown { get; set; }
+
+    [Parameter]
+    protected EventCallback<UIMouseEventArgs> OnClick { get; set; }
+
+    [Parameter]
+    protected RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    protected string Href { get; set; }
+
+}

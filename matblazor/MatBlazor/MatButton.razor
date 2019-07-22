@@ -1,0 +1,17 @@
+﻿@inherits BaseMatButton
+
+<button class="@ClassMapper.Class" style="@Style" onclick="@OnClickHandler" disabled=@Disabled aria-label="@(Label ?? Icon)" @ref="Ref" type="@Type" name="@Name" value="@Value">
+    @if (Icon != null)
+    {
+        <span class="material-icons mdc-button__icon">@Icon</span>
+    }
+    @if (Label != null)
+    {
+        @Label
+    }
+    @ChildContent
+    @if (TrailingIcon != null)
+    {
+        <span class="material-icons mdc-button__icon mat-button__icon--trailing">@TrailingIcon</span>
+    }
+</button>

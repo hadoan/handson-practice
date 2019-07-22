@@ -1,0 +1,73 @@
+@inject IJSRuntime JsRuntime
+
+<DocMatIconButton></DocMatIconButton>
+
+<h5 class="mat-h5">Example</h5>
+<DemoContainer>
+    <Content>
+        @using Microsoft.AspNetCore.Components
+
+
+        <h4 class="mat-subtitle1">Simple use</h4>
+        <MatIconButton Icon="favorite" OnClick="@RunOnClick"></MatIconButton>
+
+        <h5 class="mat-subtitle1">With Font-Awsome Icons</h5>
+        <MatIconButton>
+            <i class="fa fa-github" aria-hidden="true"></i>
+        </MatIconButton>
+
+        <h5 class="mat-subtitle1">With href link</h5>
+        <MatIconButton Link="https://github.com/BlazorComponents/MatBlazor">
+            <MatIcon>@MatIconNames.Touch_app</MatIcon>
+        </MatIconButton>
+
+        <h5 class="mat-subtitle1">With Toggle</h5>
+        <MatIconButton Icon="favorite_border" ToggleIcon="favorite">
+        </MatIconButton>
+
+        @functions
+        {
+
+            public void RunOnClick(UIMouseEventArgs e)
+            {
+                JsRuntime.InvokeAsync<object>("window.alert", "Test");
+            }
+
+        }
+
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        @using Microsoft.AspNetCore.Components
+
+
+        <h4 class=""mat-subtitle1"">Simple use</h4>
+        <MatIconButton Icon=""favorite"" OnClick=""@RunOnClick""></MatIconButton>
+
+        <h5 class=""mat-subtitle1"">With Font-Awsome Icons</h5>
+        <MatIconButton>
+            <i class=""fa fa-github"" aria-hidden=""true""></i>
+        </MatIconButton>
+
+        <h5 class=""mat-subtitle1"">With href link</h5>
+        <MatIconButton Link=""https://github.com/BlazorComponents/MatBlazor"">
+            <MatIcon>@MatIconNames.Touch_app</MatIcon>
+        </MatIconButton>
+
+        <h5 class=""mat-subtitle1"">With Toggle</h5>
+        <MatIconButton Icon=""favorite_border"" ToggleIcon=""favorite"">
+        </MatIconButton>
+
+        @functions
+        {
+
+            public void RunOnClick(UIMouseEventArgs e)
+            {
+                JsRuntime.InvokeAsync<object>(""window.alert"", ""Test"");
+            }
+
+        }
+
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>

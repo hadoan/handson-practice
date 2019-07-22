@@ -1,0 +1,62 @@
+<DocMatSlideToggle></DocMatSlideToggle>
+
+<h5 class="mat-h5">Example</h5>
+
+<DemoContainer>
+    <Content>
+        <MatSlideToggle @bind-Checked="@Val1"></MatSlideToggle>
+        <span>@Val1</span>
+        <MatSlideToggle @bind-Checked="@Val2"></MatSlideToggle>
+        <span>@Val2</span>
+
+        @functions
+        {
+            private bool Val1 = false;
+            private bool Val2 = true;
+        }
+
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatSlideToggle @bind-Checked=""@Val1""></MatSlideToggle>
+        <span>@Val1</span>
+        <MatSlideToggle @bind-Checked=""@Val2""></MatSlideToggle>
+        <span>@Val2</span>
+
+        @functions
+        {
+            private bool Val1 = false;
+            private bool Val2 = true;
+        }
+
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+
+<h5 class="mat-h5">Label</h5>
+
+<DemoContainer>
+    <Content>
+        <MatSlideToggle Label="off/on"></MatSlideToggle>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatSlideToggle Label=""off/on""></MatSlideToggle>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+
+<h5 class="mat-h5">Disabled</h5>
+
+<DemoContainer>
+    <Content>
+        <MatSlideToggle Disabled="true"></MatSlideToggle>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatSlideToggle Disabled=""true""></MatSlideToggle>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>

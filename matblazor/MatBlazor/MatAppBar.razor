@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Components
+@inherits BaseMatAppBar
+
+
+<header class="@ClassMapper.Class" @ref="Ref" style="@Style">
+    @ChildContent
+</header>
+
+@functions
+{
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+}

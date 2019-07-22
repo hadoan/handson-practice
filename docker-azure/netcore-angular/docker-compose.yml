@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  web.api:
+    image: konbinidockertest.azurecr.io/web.api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: netcore/Dockerfile    
+  
+  web.frontend:
+    image: $konbinidockertest.azurecr.io/web.frontend:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: angular/Dockerfile

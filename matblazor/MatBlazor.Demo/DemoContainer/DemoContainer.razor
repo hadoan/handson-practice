@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Components
+<div style="display: flex; flex-direction: column; padding: 10px;" class="mat-elevation-z5">
+    <div style="padding: 5px; border: 1px solid white;" class="@Class">
+        @Content
+    </div>
+    <div style="padding: 5px; font-family: monospace; overflow: auto;">
+        <div>
+            @SourceContent
+        </div>
+    </div>
+</div>
+
+
+@functions
+{
+
+    [Parameter]
+    string Class { get; set; }
+
+    [Parameter]
+    RenderFragment Content { get; set; }
+
+    [Parameter]
+    RenderFragment SourceContent { get; set; }
+
+    [Parameter]
+    string SourcePath { get; set; }
+
+}

@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Components
+
+@* mdc-top-app-bar__action-item *@
+<a class="material-icons mdc-top-app-bar__action-item" aria-label="@Label" alt="@Label" onclick="@OnClickHandler">
+    @Icon
+</a>
+
+
+@functions
+{
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    private EventCallback<UIMouseEventArgs> OnClick { get; set; }
+
+    [Parameter]
+    private string Icon { get; set; }
+
+    [Parameter]
+    public string Label { get; set; }
+
+    private void OnClickHandler(UIMouseEventArgs e)
+    {
+        OnClick.InvokeAsync(e);
+    }
+
+}

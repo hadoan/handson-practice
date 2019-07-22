@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Components
+<div class="mdc-top-app-bar__row">
+    @ChildContent
+</div>
+
+@functions
+{
+
+    [Parameter]
+    private RenderFragment ChildContent { get; set; }
+
+}

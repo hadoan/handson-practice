@@ -1,0 +1,54 @@
+<DocMatRipple></DocMatRipple>
+
+<h5 class="mat-h5">Example</h5>
+
+<style>
+    .demo-mat-ripple-container { }
+</style>
+
+<DemoContainer Class="demo-mat-ripple-container">
+    <Content>
+        <style>
+            .demo-mat-ripple {
+                width: 300px;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: inline-flex;
+            }
+        </style>
+        <MatRipple class="demo-mat-ripple">
+            Click here
+        </MatRipple>
+        <MatRipple class="demo-mat-ripple" Color="@MatRippleColor.Primary">
+            Primary
+        </MatRipple>
+        <MatRipple class="demo-mat-ripple" Color="@MatRippleColor.Secondary">
+            Secondary
+        </MatRipple>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <style>
+            .demo-mat-ripple {
+                width: 300px;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: inline-flex;
+            }
+        </style>
+        <MatRipple class=""demo-mat-ripple"">
+            Click here
+        </MatRipple>
+        <MatRipple class=""demo-mat-ripple"" Color=""@MatRippleColor.Primary"">
+            Primary
+        </MatRipple>
+        <MatRipple class=""demo-mat-ripple"" Color=""@MatRippleColor.Secondary"">
+            Secondary
+        </MatRipple>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>

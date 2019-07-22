@@ -1,0 +1,58 @@
+<DocMatDivider></DocMatDivider>
+
+<h5 class="mat-h5">Example</h5>
+
+<DemoContainer>
+    <Content>
+        <h3 class="mat-subtitle1">Simple</h3>
+
+        <MatListItem>Item 1</MatListItem>
+        <MatDivider></MatDivider>
+        <MatListItem>Item 2</MatListItem>
+        <MatDivider></MatDivider>
+        <MatListItem>Item 3</MatListItem>
+
+        <h3 class="mat-subtitle1">Inset</h3>
+
+        <MatListItem>Item 1</MatListItem>
+        <MatDivider Inset="true"></MatDivider>
+        <MatListItem>Item 2</MatListItem>
+        <MatDivider Inset="true"></MatDivider>
+        <MatListItem>Item 3</MatListItem>
+
+        <h3 class="mat-subtitle1">Padded</h3>
+
+        <MatListItem>Item 1</MatListItem>
+        <MatDivider Padded="true"></MatDivider>
+        <MatListItem>Item 2</MatListItem>
+        <MatDivider Padded="true"></MatDivider>
+        <MatListItem>Item 3</MatListItem>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <h3 class=""mat-subtitle1"">Simple</h3>
+
+        <MatListItem>Item 1</MatListItem>
+        <MatDivider></MatDivider>
+        <MatListItem>Item 2</MatListItem>
+        <MatDivider></MatDivider>
+        <MatListItem>Item 3</MatListItem>
+
+        <h3 class=""mat-subtitle1"">Inset</h3>
+
+        <MatListItem>Item 1</MatListItem>
+        <MatDivider Inset=""true""></MatDivider>
+        <MatListItem>Item 2</MatListItem>
+        <MatDivider Inset=""true""></MatDivider>
+        <MatListItem>Item 3</MatListItem>
+
+        <h3 class=""mat-subtitle1"">Padded</h3>
+
+        <MatListItem>Item 1</MatListItem>
+        <MatDivider Padded=""true""></MatDivider>
+        <MatListItem>Item 2</MatListItem>
+        <MatDivider Padded=""true""></MatDivider>
+        <MatListItem>Item 3</MatListItem>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>

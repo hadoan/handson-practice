@@ -1,0 +1,79 @@
+@using Microsoft.AspNetCore.Components
+<h3 class="mat-h3">BaseMatComponent</h3>
+
+<p class="mat-body1">BaseMatComponent contains base component parameters and features.</p>
+
+<h5 class="mat-h5">Capture of Reference of the component</h5>
+<DemoContainer>
+    <Content>
+        <MatButton @ref="ButtonRef" OnClick="@Click">Get me Ref</MatButton>
+
+        @functions
+        {
+            BaseMatButton ButtonRef;
+
+            void Click(UIMouseEventArgs e)
+            {
+            // this.ButtonRef - Reference for MatButton component
+            // this.ButtonRef.Ref - Reference for Dom Element of button
+            }
+
+        }
+
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatButton @ref=""ButtonRef"" OnClick=""@Click"">Get me Ref</MatButton>
+
+        @functions
+        {
+            BaseMatButton ButtonRef;
+
+            void Click(UIMouseEventArgs e)
+            {
+            // this.ButtonRef - Reference for MatButton component
+            // this.ButtonRef.Ref - Reference for Dom Element of button
+            }
+
+        }
+
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+
+<h5 class="mat-h5">Apply css Class to MatBlazor Components</h5>
+<DemoContainer>
+    <Content>
+        <style>
+            .my-button-class { background: lightcoral !important; }
+        </style>
+
+        <MatButton Class="my-button-class">Button with class</MatButton>
+        <MatIconButton Class="my-button-class" Icon="@MatIconNames.Favorite"></MatIconButton>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <style>
+            .my-button-class { background: lightcoral !important; }
+        </style>
+
+        <MatButton Class=""my-button-class"">Button with class</MatButton>
+        <MatIconButton Class=""my-button-class"" Icon=""@MatIconNames.Favorite""></MatIconButton>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>
+
+<h5 class="mat-h5">Apply style to MatBlazor Components</h5>
+<DemoContainer>
+    <Content>
+        <MatButton Style="background: lightcoral;">Button with style</MatButton>
+        <MatIconButton Style="background: lightcoral;" Icon="@MatIconNames.Favorite"></MatIconButton>
+    </Content>
+    <SourceContent>
+    	<BlazorFiddle Template="MatBlazor" Code=@(@"
+        <MatButton Style=""background: lightcoral;"">Button with style</MatButton>
+        <MatIconButton Style=""background: lightcoral;"" Icon=""@MatIconNames.Favorite""></MatIconButton>
+    ")></BlazorFiddle>
+    </SourceContent>
+</DemoContainer>

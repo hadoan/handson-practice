@@ -1,0 +1,140 @@
+@page "/"
+
+@implements IDisposable
+
+
+<h1 class="mat-h1"><img src="https://raw.githubusercontent.com/SamProf/MatBlazor/master/content/logo.png" style="max-height: 100px;"/> MatBlazor</h1>
+<h4 class="mat-h4">Material Design components for Blazor and Razor Components.</h4>
+<div>
+    <a href="https://www.nuget.org/packages/MatBlazor/" target="_blank">
+        <img src="https://img.shields.io/nuget/v/MatBlazor.svg"/>
+    </a>
+    <a href="https://gitter.im/MatBlazor/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge" target="_blank">
+        <img src="https://badges.gitter.im/MatBlazor/community.svg"/>
+    </a>
+    <a href="https://github.com/SamProf/MatBlazor" target="_blank">
+        <img src="https://img.shields.io/github/stars/SamProf/MatBlazor.svg"/>
+    </a>
+    <a href="https://github.com/SamProf/MatBlazor/issues" target="_blank">
+        <img src="https://img.shields.io/github/issues/SamProf/matblazor.svg"/>
+    </a>
+    <a href="https://github.com/SamProf/MatBlazor/blob/master/LICENSE" target="_blank">
+        <img src="https://img.shields.io/github/license/SamProf/MatBlazor.svg"/>
+    </a>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9XT68N2VKWTPE&source=url" target="_blank" style="margin-left: 5px;">
+        <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"/>
+    </a>
+</div>
+
+
+<style>
+    .blazor-fiddle { overflow-wrap: break-word; }
+
+    .index-row-item { padding: 5px; }
+</style>
+
+
+<div class="mat-layout-grid index-row-container">
+    <div class="mat-layout-grid-inner">
+
+        <div class="mat-layout-grid-cell mat-layout-grid-cell-span-6 mat-elevation-z2 index-row-item">
+            <div class="">
+                <h5 class="mat-h5">Installation</h5>
+
+                <p>
+                    Install MatBlazor library via nuget.
+                </p>
+
+                <p>
+                    <code>
+                        Install-Package MatBlazor
+                    </code>
+                </p>
+                <p>
+                    or
+                </p>
+                <p>
+                    <code>
+                        dotnet add package MatBlazor
+                    </code>
+                </p>
+            </div>
+
+            <div class="">
+                <h5 class="mat-h5">_Imports.razor</h5>
+                <p>
+                    Add @@using MatBlazor in main _Imports.razor
+                </p>
+
+                <p>
+                    <BlazorFiddle Template="MatBlazor" Code=@(@"@using MatBlazor")>
+                    </BlazorFiddle>
+                </p>
+                <h5 class="mat-h5">Usage</h5>
+                <p>
+                    MatBlazor components are self-supporting.
+                </p>
+
+                <p>
+                    <BlazorFiddle Template="MatBlazor" Code=@(@"<MatButton>Test</MatButton>")>
+                    </BlazorFiddle>
+                </p>
+
+                <h5 class="mat-h5">MatBlazor components for server-side Blazor (ex Razor Components)</h5>
+
+                <p>
+                    Used
+                    <a href="https://github.com/SamProf/EmbeddedBlazorContent">
+                        <b>EmbeddedBlazorContent</b>
+                    </a> library:
+                    <a href="https://www.nuget.org/packages/EmbeddedBlazorContent/" target="_blank">
+                        <img src="https://img.shields.io/nuget/v/EmbeddedBlazorContent.svg"/>
+                    </a>
+                </p>
+
+                <p>
+                    1) Startup.cs
+                    <BlazorFiddle Template="MatBlazor" Code=@(@"app.UseEmbeddedBlazorContent(typeof(MatBlazor.BaseMatComponent).Assembly);")>
+                    </BlazorFiddle>
+                </p>
+                <p>
+                    2) _Host.cshtml (head section)
+                    <BlazorFiddle Template="MatBlazor" Code=@(@"@using EmbeddedBlazorContent
+<head>
+    ...
+    @Html.EmbeddedBlazorContent()
+</head>")>
+                    </BlazorFiddle>
+                </p>
+
+            </div>
+
+            <div>
+                <h5 class="mat-h5">Components: </h5>
+                <DemoDrawerContent></DemoDrawerContent>
+
+            </div>
+
+
+        </div>
+
+        <div class="mat-layout-grid-cell mat-layout-grid-cell-span-6 mat-elevation-z2 index-row-item">
+            <div class="">
+                <News></News>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+@functions
+{
+
+    public void Dispose()
+    {
+        Console.WriteLine("My Dispose 2");
+    }
+
+}
